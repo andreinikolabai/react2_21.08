@@ -13,8 +13,8 @@ export default class Table extends Component {
     componentDidMount() {
         const activateItems = setInterval(() => {
             let unActiveItems = this.state.list.filter((item) => !item.active),
-                randomIndex = getRandomIntInclusive(0, unActiveItems.length - 1), // 1
-                randomObj = unActiveItems[randomIndex]; // { type: `flamingo`, icon: `🦩`}
+                randomIndex = getRandomIntInclusive(0, unActiveItems.length - 1),
+                randomObj = unActiveItems[randomIndex];
 
             this.setState(
                 {
@@ -39,7 +39,7 @@ export default class Table extends Component {
                     }
                 }
             );
-        }, 1000);
+        }, 2000);
     }
 
     render() {
